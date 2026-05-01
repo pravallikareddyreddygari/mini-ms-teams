@@ -172,9 +172,10 @@ export default function Chat({
                     {message.sender}
                   </span>
                   <span className={`text-[10px] ${message.sender === "You" ? "text-blue-100" : "text-gray-500"}`}>
-                    {new Date(message.timestamp).toLocaleTimeString([], {
+                    {new Date(message.timestamp).toLocaleTimeString("en-US", {
                       hour: "2-digit",
                       minute: "2-digit",
+                      hour12: true,
                     })}
                   </span>
                 </div>
